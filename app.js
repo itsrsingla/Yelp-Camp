@@ -19,7 +19,9 @@ var indexRoutes           = require("./routes/index");
 
 // mongoose.connect("mongodb://localhost/Camp_app");
 const Password = process.env.PASSCODE;
-mongoose.connect("mongodb+srv://" + Password +"@cluster0.holay.mongodb.net/YelpCampDB",{ useNewUrlParser: true });
+const url = "mongodb+srv://" + Password +"@cluster0.holay.mongodb.net/YelpCampDB";
+console.log(url);
+mongoose.connect(url,{ useNewUrlParser: true });
 
 
 app.use(bodyParser.urlencoded({extended:true}));
