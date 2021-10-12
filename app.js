@@ -19,7 +19,7 @@ var indexRoutes           = require("./routes/index");
 
 // mongoose.connect("mongodb://localhost/Camp_app");
 const Password = process.env.PASSCODE;
-mongoose.connect("mongodb+srv://" + Password +"@cluster0.holay.mongodb.net/YelpCampDB?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://" + Password +"@cluster0.holay.mongodb.net/YelpCampDB",{ useNewUrlParser: true });
 
 
 app.use(bodyParser.urlencoded({extended:true}));
